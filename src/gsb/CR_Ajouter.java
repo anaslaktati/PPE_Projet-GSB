@@ -59,6 +59,7 @@ public class CR_Ajouter extends javax.swing.JFrame {
         jMenuItem3.setText("jMenuItem3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(590, 400));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -109,7 +110,7 @@ public class CR_Ajouter extends javax.swing.JFrame {
         getContentPane().add(jComboBox1);
         jComboBox1.setBounds(130, 100, 120, 20);
         getContentPane().add(jFormattedTextField1);
-        jFormattedTextField1.setBounds(130, 130, 6, 20);
+        jFormattedTextField1.setBounds(130, 130, 200, 20);
 
         jMenu1.setText("Comptes-rendus");
 
