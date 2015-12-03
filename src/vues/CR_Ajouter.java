@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gsb;
+package vues;
 
 /**
  *
@@ -59,7 +59,6 @@ public class CR_Ajouter extends javax.swing.JFrame {
         jMenuItem3.setText("jMenuItem3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(590, 400));
         setResizable(false);
         getContentPane().setLayout(null);
 

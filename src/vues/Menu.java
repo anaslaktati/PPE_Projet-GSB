@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gsb;
+package vues;
 
 /**
  *
  * @author anas
  */
-public class CR_Apercu extends javax.swing.JFrame {
+public class Menu extends javax.swing.JFrame {
 
     /**
      * Creates new form Menu
      */
-    public CR_Apercu() {
+    public Menu() {
         initComponents();
     }
 
@@ -30,20 +30,7 @@ public class CR_Apercu extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
-        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -59,58 +46,13 @@ public class CR_Apercu extends javax.swing.JFrame {
         jMenuItem3.setText("jMenuItem3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(590, 400));
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("TI-Nspire", 1, 14)); // NOI18N
-        jLabel2.setText("Rapport de visite :");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(210, 10, 210, 40);
-
-        jLabel1.setText("Numero Rapport");
+        jLabel1.setFont(new java.awt.Font("TI-Nspire", 1, 18)); // NOI18N
+        jLabel1.setText("Bienvenue !");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(30, 70, 90, 14);
-
-        jLabel3.setText("Praticient");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(30, 100, 90, 14);
-
-        jLabel4.setText("Date Rapport");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(30, 130, 90, 14);
-
-        jLabel5.setText("Motif Visite");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 160, 90, 14);
-
-        jLabel6.setText("BILAN");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(30, 200, 29, 14);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(130, 70, 200, 20);
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(130, 130, 200, 20);
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(130, 160, 200, 30);
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(130, 200, 200, 100);
-
-        jButton1.setText("Ajouter");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(480, 310, 73, 23);
-
-        jButton2.setText("Retour");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(390, 310, 65, 23);
-
-        jButton3.setText("Details");
-        getContentPane().add(jButton3);
-        jButton3.setBounds(260, 100, 70, 23);
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(130, 100, 120, 20);
+        jLabel1.setBounds(210, 40, 190, 70);
 
         jMenu1.setText("Comptes-rendus");
 
@@ -153,36 +95,26 @@ public class CR_Apercu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CR_Apercu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CR_Apercu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CR_Apercu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CR_Apercu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CR_Apercu().setVisible(true);
+                new Menu().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -193,9 +125,5 @@ public class CR_Apercu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }

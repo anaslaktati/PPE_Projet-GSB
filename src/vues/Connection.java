@@ -1,4 +1,4 @@
-package gsb;
+package vues;
 
 public class Connection extends javax.swing.JFrame {
 
@@ -23,7 +23,6 @@ public class Connection extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("RAPPORT_VISITE");
-        setPreferredSize(new java.awt.Dimension(750, 400));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -43,7 +42,7 @@ public class Connection extends javax.swing.JFrame {
         getContentPane().add(jTextField2);
         jTextField2.setBounds(70, 140, 140, 30);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gsb/Logo_656853.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vues/Logo_656853.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(-30, 20, 770, 370);
 
