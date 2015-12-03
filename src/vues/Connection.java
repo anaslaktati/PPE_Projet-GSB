@@ -23,6 +23,7 @@ public class Connection extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("RAPPORT_VISITE");
+        setPreferredSize(new java.awt.Dimension(750, 400));
         setResizable(false);
         getContentPane().setLayout(null);
 
