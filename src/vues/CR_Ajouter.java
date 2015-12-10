@@ -5,6 +5,7 @@
  */
 package vues;
 
+import java.awt.HeadlessException;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
@@ -27,6 +28,9 @@ public class CR_Ajouter extends javax.swing.JFrame {
         initComponents();
     }
 
+  
+
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

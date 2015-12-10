@@ -43,5 +43,10 @@ public class Controleur {
         this.vue = vue;
     }
     
+    public void connection(String login,String mdp){
+              
+        
+    } 
+    
     
 }
