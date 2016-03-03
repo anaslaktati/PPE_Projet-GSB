@@ -49,7 +49,9 @@ public class Dao {
     
     public void connecter() throws DaoException {
         try {
-            Class.forName(piloteJdbc);
+            String urlBd = "jdbc:oracle:thin:@localhost:1521:XE";
+            String loginBd = "ora_2SLAMPPE";
+            String mdpBd = "equipe02";
             cnx = DriverManager.getConnection(urlBd, loginBd, mdpBd);
             
             pstmtLireUnRapport = cnx.prepareStatement("SELECT * FROM RAPPORT_VISITE WHERE RAP_NUM=?");
@@ -68,9 +70,7 @@ public class Dao {
            
         } catch (SQLException ex) {
             throw new DaoException("DAO - connecter : pb de connexion\n" + ex.getMessage());
-        } catch (ClassNotFoundException ex) {
-            throw new DaoException("DAO - connecter : pb de pilote JDBC\n" + ex.getMessage());
-        }
+        } 
     }
 
     public void deconnecter() throws DaoException {

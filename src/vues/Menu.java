@@ -5,6 +5,8 @@
  */
 package vues;
 
+import controleurs.Controleur;
+
 /**
  *
  * @author anas
@@ -14,6 +16,11 @@ public class Menu extends javax.swing.JFrame {
     /**
      * Creates new form Menu
      */
+    
+    
+    private Controleur controleur;
+    
+    
     public Menu() {
         initComponents();
     }
@@ -65,6 +72,11 @@ public class Menu extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Visiteurs");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         jMenu5.setText("Praticiens");
@@ -77,6 +89,10 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,4 +142,15 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     // End of variables declaration//GEN-END:variables
+
+    public Controleur getControleur() {
+        return controleur;
+    }
+    
+
+    public void setControleur(Controleur controleur) {
+        this.controleur = controleur;
+    }
+
+
 }

@@ -11,7 +11,7 @@ import modele.dao.DaoOracle;
 import modele.dao.Dao;
 import modele.metier.Visiteur;
 import vues.Menu;
-import vues.VueVisiteur;
+import vues.Visiteurs;
 
 /**
  *
@@ -28,7 +28,7 @@ public class CtrlVisiteur extends Controleur{
         try {
             dao.connecter();
             // initialiser l'interface graphique
-            setVue(new VueVisiteur(this));
+            setVue(new Visiteurs());
             this.afficherVue();
             chargerListeVisiteurs();
             
@@ -64,4 +64,6 @@ public class CtrlVisiteur extends Controleur{
         ((VueVisiteur)vue).getjTextFieldSecteur().setText(unVisiteur.getCodeSecteur());
 
     }
+
+    
 }

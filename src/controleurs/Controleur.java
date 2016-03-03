@@ -4,7 +4,10 @@
  */
 package controleurs;
 
-import vues.VueAbstraite;
+import controleurs.*;
+import vues.*;
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -12,41 +15,46 @@ import vues.VueAbstraite;
  */
 public class Controleur {
     
+    private CtrlAccueil ctrlAccueil;
+    private CtrlRapport ctrlRapport;
+    private CtrlVisiteur ctrlVisiteur;
     private Controleur ctrl;
-    protected VueAbstraite vue;
+    
+  
 
     public Controleur(Controleur ctrl) {
         this.ctrl = ctrl;
     }
     
-    public void afficherVue(){
-        vue.afficher();
+    public CtrlVisiteur getVue(){
+        return ctrlVisiteur;
     }
     
-    public void cacherVue(){
-        vue.cacher();
-    }
-
-    public Controleur getCtrl() {
-        return ctrl;
-    }
-
-    public void setCtrl(Controleur ctrl) {
-        this.ctrl = ctrl;
-    }
-
-    public VueAbstraite getVue() {
-        return vue;
-    }
-
-    public void setVue(VueAbstraite vue) {
-        this.vue = vue;
+   public void afficherRapport(){
+        this.ctrlAccueil.getVue().setVisible(false);
+        this.ctrlRapport.getVue().setVisible(true);
+        this.ctrlVisiteur.getVue().setVisible(false);
     }
     
-    public void connection(String login,String mdp){
-              
-        
-    } 
+    public void afficherVisiteur(){
+        this.ctrlAccueil.getVue().setVisible(false);
+        this.ctrlRapport.getVue().setVisible(false);
+        this.ctrlVisiteur.getVue().setVisible(true);
+    }
     
+    public void afficherAccueil(){
+        this.ctrlAccueil.getVue().setVisible(true);
+        this.ctrlRapport.getVue().setVisible(false);
+        this.ctrlVisiteur.getVue().setVisible(false);
+    }
+
+    public void quitterApplication(){       
+        // Confirmer avant de quitter
+        int rep = JOptionPane.showConfirmDialog(null, "Quitter l'application\nEtes-vous sûr(e) ?", "AGENCEB", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (rep == JOptionPane.YES_OPTION) {
+            // mettre fin à l'application
+            System.exit(0);
+        }
+    }
     
 }

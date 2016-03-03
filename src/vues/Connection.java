@@ -1,15 +1,25 @@
 package vues;
 
+import controleurs.Controleur;
+import javax.swing.JOptionPane;
+
+
 public class Connection extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
      */
+    
+    private Controleur controleur;
+    
     public Connection() {
         initComponents();
     }
 
-  
+    public Controleur getControleur() {
+          return controleur;
+      }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -36,6 +46,11 @@ public class Connection extends javax.swing.JFrame {
         jButton1.setBounds(230, 120, 47, 23);
 
         jButton2.setText("Quitter");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
         jButton2.setBounds(620, 330, 67, 23);
         getContentPane().add(jTextField1);
@@ -49,6 +64,10 @@ public class Connection extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        getControleur.
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

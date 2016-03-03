@@ -5,6 +5,8 @@
  */
 package vues;
 
+import controleurs.CtrlRapport;
+
 /**
  *
  * @author anas
@@ -17,6 +19,7 @@ public class CR_Apercu extends javax.swing.JFrame {
     public CR_Apercu() {
         initComponents();
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -59,7 +62,7 @@ public class CR_Apercu extends javax.swing.JFrame {
         jMenuItem3.setText("jMenuItem3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setResizable(false);
+        setPreferredSize(new java.awt.Dimension(600, 400));
         getContentPane().setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("TI-Nspire", 1, 14)); // NOI18N
@@ -77,23 +80,23 @@ public class CR_Apercu extends javax.swing.JFrame {
 
         jLabel4.setText("Date Rapport");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(30, 130, 90, 14);
+        jLabel4.setBounds(30, 140, 90, 14);
 
         jLabel5.setText("Motif Visite");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 160, 90, 14);
+        jLabel5.setBounds(30, 180, 90, 14);
 
         jLabel6.setText("BILAN");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(30, 200, 29, 14);
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(130, 70, 200, 20);
+        jTextField1.setBounds(130, 70, 200, 30);
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(130, 130, 200, 20);
+        jTextField3.setBounds(130, 130, 200, 30);
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(130, 160, 200, 30);
+        jTextField4.setBounds(130, 170, 200, 30);
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(130, 200, 200, 100);
+        jTextField5.setBounds(130, 210, 200, 100);
 
         jButton1.setText("Ajouter");
         getContentPane().add(jButton1);

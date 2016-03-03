@@ -12,8 +12,7 @@ import modele.dao.DaoException;
 import modele.dao.DaoOracle;
 import modele.dao.Dao;
 import modele.metier.Rapport;
-import vues.Menu;
-import vues.CR_Apercu;
+
 
 /**
  *
@@ -31,7 +30,7 @@ public class CtrlRapport extends Controleur{
         try {
             dao.connecter();
             // initialiser l'interface graphique
-            setVue(new VueRapport(this));
+            
             this.afficherVue();
             chargerListeRapport();
             
@@ -74,6 +73,10 @@ public class CtrlRapport extends Controleur{
             ctrlCréerRapport.afficherVue();
         }
         this.cacherVue();
+    }
+
+    Object getVue() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
