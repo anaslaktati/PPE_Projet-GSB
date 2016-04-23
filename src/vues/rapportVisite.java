@@ -1,9 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Vues;
+
+import com.toedter.calendar.JDateChooser;
+import javax.swing.DefaultCellEditor;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTable;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 
 /**
@@ -15,10 +20,115 @@ public class rapportVisite extends javax.swing.JFrame {
     /**
      * Creates new form rapportVisite
      */
+    JComboBox jComboBoxMedic = new JComboBox();
+    DefaultComboBoxModel modeleListePracticien;
+    DefaultComboBoxModel modeleListeMedoc;
+
+    
     public rapportVisite() {
         initComponents();
+        modeleListePracticien = new DefaultComboBoxModel();
+        modeleListeMedoc = new DefaultComboBoxModel();
+        jComboBoxPracticien.setModel(modeleListePracticien);
+        jComboBoxMedic.setModel(modeleListeMedoc);
     }
 
+    public DefaultComboBoxModel getModelListeMedoc(){
+        return modeleListeMedoc;
+    }
+    
+    public DefaultComboBoxModel getModeleListePracticien() {
+        return modeleListePracticien;
+    }
+    
+    public JButton getjButtonDetails() {
+        return jButtonDetails;
+    }
+
+    public JDateChooser getjDateChooser1() {
+        return jDateChooser1;
+    }
+    
+    public void setjButtonDetails(JButton jButtonDetails) {
+        this.jButtonDetails = jButtonDetails;
+    }
+
+    public JButton getjButtonFermer() {
+        return jButtonFermer;
+    }
+
+    public void setjButtonFermer(JButton jButtonFermer) {
+        this.jButtonFermer = jButtonFermer;
+    }
+
+    public JButton getjButtonNouveau() {
+        return jButtonNouveau;
+    }
+
+    public JComboBox getjComboBoxMedic() {
+        return jComboBoxMedic;
+    }
+    
+    
+
+    public void setjButtonNouveau(JButton jButtonNouveau) {
+        this.jButtonNouveau = jButtonNouveau;
+    }
+
+    public JButton getjButtonPrecedent() {
+        return jButtonPrecedent;
+    }
+
+    public void setjButtonPrecedent(JButton jButtonPrecedent) {
+        this.jButtonPrecedent = jButtonPrecedent;
+    }
+
+    public JButton getjButtonSuivant() {
+        return jButtonSuivant;
+    }
+
+    public JTable getjTable1() {
+        return jTable1;
+    }
+
+    
+    
+    public void setjButtonSuivant(JButton jButtonSuivant) {
+        this.jButtonSuivant = jButtonSuivant;
+    }
+
+    public JTextField getjTextFieldNumRapport() {
+        return jTextFieldNumRapport;
+    }
+
+    public void setjTextFieldNumRapport(JTextField jTextFieldNumRapport) {
+        this.jTextFieldNumRapport = jTextFieldNumRapport;
+    }
+
+    public JTextArea getjTextAreaBilan() {
+        return jTextAreaBilan;
+    }
+
+    public void setjTextAreaBilan(JTextArea jTextAreaBilan) {
+        this.jTextAreaBilan = jTextAreaBilan;
+    }
+
+    public JTextField getjTextFieldModifVisite() {
+        return jTextFieldModifVisite;
+    }
+
+    public void setjTextFieldModifVisite(JTextField jTextFieldModifVisite) {
+        this.jTextFieldModifVisite = jTextFieldModifVisite;
+    }
+
+    public JComboBox getjComboBoxPracticien() {
+        return jComboBoxPracticien;
+    }
+
+    public void setjComboBoxPracticien(JComboBox jComboBoxPracticien) {
+        this.jComboBoxPracticien = jComboBoxPracticien;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,42 +139,44 @@ public class rapportVisite extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextFieldNumRapport = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        jComboBoxPracticien = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jTextFieldModifVisite = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTextAreaBilan = new javax.swing.JTextArea();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jButtonDetails = new javax.swing.JButton();
+        jButtonSuivant = new javax.swing.JButton();
+        jButtonNouveau = new javax.swing.JButton();
+        jButtonPrecedent = new javax.swing.JButton();
+        jButtonFermer = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Numéro Rapport");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldNumRapport.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextFieldNumRapport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextFieldNumRapportActionPerformed(evt);
             }
         });
 
         jLabel2.setText("Practicien");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxPracticien.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxPracticien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jComboBoxPracticienActionPerformed(evt);
             }
         });
 
@@ -72,26 +184,55 @@ public class rapportVisite extends javax.swing.JFrame {
 
         jLabel4.setText("Motif Visite");
 
+        jTextFieldModifVisite.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldModifVisiteActionPerformed(evt);
+            }
+        });
+
         jLabel5.setText("Bilan");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jTextAreaBilan.setColumns(20);
+        jTextAreaBilan.setLineWrap(true);
+        jTextAreaBilan.setRows(5);
+        jTextAreaBilan.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(jTextAreaBilan);
 
         jLabel6.setText("Offre echantillon");
 
-        jButton1.setText("Details");
+        jButtonDetails.setText("Details");
+        jButtonDetails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDetailsActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Suivant");
+        jButtonSuivant.setText("Suivant");
+        jButtonSuivant.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSuivantActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Nouveau");
+        jButtonNouveau.setText("Nouveau");
+        jButtonNouveau.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonNouveauActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("Précédent");
+        jButtonPrecedent.setText("Précédent");
 
-        jButton5.setText("Fermer");
+        jButtonFermer.setText("Fermer");
+        jButtonFermer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFermerActionPerformed(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null},
                 {null, null},
                 {null, null},
                 {null, null},
@@ -100,11 +241,25 @@ public class rapportVisite extends javax.swing.JFrame {
             new String [] {
                 "Médicaments", "Nb Enregistrements"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setCellEditor(new DefaultCellEditor(jComboBoxMedic));
+        }
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setText("Rapport de visite");
+
+        jDateChooser1.setDateFormatString("dd/MM/yyyy");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -118,9 +273,10 @@ public class rapportVisite extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6))
+                            .addComponent(jLabel6)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(41, 41, 41)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
@@ -128,26 +284,27 @@ public class rapportVisite extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField1)
-                                            .addComponent(jComboBox1, 0, 91, Short.MAX_VALUE)
-                                            .addComponent(jTextField2))
-                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jDateChooser1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jTextFieldNumRapport, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                                            .addComponent(jTextFieldModifVisite, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jComboBoxPracticien, javax.swing.GroupLayout.Alignment.LEADING, 0, 163, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel7)
-                                            .addComponent(jButton1))))
-                                .addGap(0, 1, Short.MAX_VALUE))))
+                                            .addComponent(jButtonDetails))))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(294, 294, 294))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton4)
+                .addComponent(jButtonPrecedent)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
+                .addComponent(jButtonSuivant)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
+                .addComponent(jButtonNouveau)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton5)
+                .addComponent(jButtonFermer)
                 .addGap(18, 18, 18))
             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
@@ -164,45 +321,73 @@ public class rapportVisite extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextFieldNumRapport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(jComboBoxPracticien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonDetails))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(20, 20, 20))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldModifVisite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
+                    .addComponent(jButtonSuivant)
+                    .addComponent(jButtonNouveau)
+                    .addComponent(jButtonPrecedent)
+                    .addComponent(jButtonFermer))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jComboBoxPracticienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxPracticienActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jComboBoxPracticienActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextFieldNumRapportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNumRapportActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jTextFieldNumRapportActionPerformed
+
+    private void jButtonFermerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFermerActionPerformed
+        
+    }//GEN-LAST:event_jButtonFermerActionPerformed
+
+    private void jButtonSuivantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSuivantActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSuivantActionPerformed
+
+    private void jButtonDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDetailsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonDetailsActionPerformed
+
+    private void jTextFieldModifVisiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldModifVisiteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldModifVisiteActionPerformed
+
+    private void jButtonNouveauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNouveauActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonNouveauActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,12 +426,13 @@ public class rapportVisite extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JButton jButtonDetails;
+    private javax.swing.JButton jButtonFermer;
+    private javax.swing.JButton jButtonNouveau;
+    private javax.swing.JButton jButtonPrecedent;
+    private javax.swing.JButton jButtonSuivant;
+    private javax.swing.JComboBox jComboBoxPracticien;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -258,8 +444,9 @@ public class rapportVisite extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextArea jTextAreaBilan;
+    private javax.swing.JTextField jTextFieldModifVisite;
+    private javax.swing.JTextField jTextFieldNumRapport;
     // End of variables declaration//GEN-END:variables
+
 }

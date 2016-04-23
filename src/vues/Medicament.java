@@ -5,6 +5,12 @@
  */
 package Vues;
 
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
 
 /**
  *
@@ -15,6 +21,7 @@ public class Medicament extends javax.swing.JFrame {
     /**
      * Creates new form Medicament
      */
+    
     public Medicament() {
         initComponents();
     }
@@ -35,20 +42,20 @@ public class Medicament extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        jTextFieldDepotLegal = new javax.swing.JTextField();
+        jTextFieldNomCommercial = new javax.swing.JTextField();
+        jTextFieldFamille = new javax.swing.JTextField();
+        jTextFieldComposition = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTextAreaEffet = new javax.swing.JTextArea();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        jTextAreaContreIndication = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jTextFieldPrixEchantillon = new javax.swing.JTextField();
+        jButtonPrecedent = new javax.swing.JButton();
+        jButtonSuivant = new javax.swing.JButton();
+        jButtonFermer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,23 +72,46 @@ public class Medicament extends javax.swing.JFrame {
 
         jLabel6.setText("Effets indésirable");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jTextFieldDepotLegal.setEditable(false);
+        jTextFieldDepotLegal.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+
+        jTextFieldNomCommercial.setEditable(false);
+        jTextFieldNomCommercial.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+
+        jTextFieldFamille.setEditable(false);
+        jTextFieldFamille.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+
+        jTextFieldComposition.setEditable(false);
+        jTextFieldComposition.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+
+        jTextAreaEffet.setEditable(false);
+        jTextAreaEffet.setColumns(20);
+        jTextAreaEffet.setLineWrap(true);
+        jTextAreaEffet.setRows(5);
+        jTextAreaEffet.setWrapStyleWord(true);
+        jTextAreaEffet.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+        jScrollPane1.setViewportView(jTextAreaEffet);
 
         jLabel7.setText("Contre indications");
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        jTextAreaContreIndication.setEditable(false);
+        jTextAreaContreIndication.setColumns(20);
+        jTextAreaContreIndication.setLineWrap(true);
+        jTextAreaContreIndication.setRows(5);
+        jTextAreaContreIndication.setWrapStyleWord(true);
+        jTextAreaContreIndication.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+        jScrollPane2.setViewportView(jTextAreaContreIndication);
 
         jLabel8.setText("Prix échantillons");
 
-        jButton1.setText("Précédent");
+        jTextFieldPrixEchantillon.setEditable(false);
+        jTextFieldPrixEchantillon.setDisabledTextColor(new java.awt.Color(51, 51, 51));
 
-        jButton2.setText("Suivant");
+        jButtonPrecedent.setText("Précédent");
 
-        jButton3.setText("Fermer");
+        jButtonSuivant.setText("Suivant");
+
+        jButtonFermer.setText("Fermer");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,87 +119,90 @@ public class Medicament extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(192, 192, 192)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(148, 148, 148)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8))
-                        .addGap(33, 33, 33)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField3)
-                            .addComponent(jTextField4)
+                            .addComponent(jTextFieldDepotLegal)
+                            .addComponent(jTextFieldNomCommercial)
+                            .addComponent(jTextFieldFamille)
+                            .addComponent(jTextFieldComposition)
                             .addComponent(jScrollPane1)
-                            .addComponent(jScrollPane2)
-                            .addComponent(jTextField5)))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(jButton1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
-                        .addComponent(jButton3)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addGap(25, 25, 25)
+                                .addComponent(jTextFieldPrixEchantillon, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(119, 119, 119)
+                                .addComponent(jButtonPrecedent)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButtonSuivant)
+                                .addGap(95, 95, 95)
+                                .addComponent(jButtonFermer)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(6, 6, 6)
+                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldDepotLegal, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jTextFieldNomCommercial, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jTextFieldFamille, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel6)))
+                    .addComponent(jTextFieldComposition, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(35, 35, 35)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel7)
-                        .addGap(55, 55, 55)))
+                        .addGap(32, 32, 32)))
+                .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPrixEchantillon, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addContainerGap())
+                    .addComponent(jButtonPrecedent)
+                    .addComponent(jButtonSuivant)
+                    .addComponent(jButtonFermer))
+                .addGap(16, 16, 16))
         );
 
         pack();
@@ -212,9 +245,9 @@ public class Medicament extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonFermer;
+    private javax.swing.JButton jButtonPrecedent;
+    private javax.swing.JButton jButtonSuivant;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -226,12 +259,54 @@ public class Medicament extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextArea jTextAreaContreIndication;
+    private javax.swing.JTextArea jTextAreaEffet;
+    private javax.swing.JTextField jTextFieldComposition;
+    private javax.swing.JTextField jTextFieldDepotLegal;
+    private javax.swing.JTextField jTextFieldFamille;
+    private javax.swing.JTextField jTextFieldNomCommercial;
+    private javax.swing.JTextField jTextFieldPrixEchantillon;
     // End of variables declaration//GEN-END:variables
+
+
+    public JTextArea getjTextAreaContreIndication() {
+        return jTextAreaContreIndication;
+    }
+
+    public JTextArea getjTextAreaEffet() {
+        return jTextAreaEffet;
+    }
+
+    public JTextField getjTextFieldComposition() {
+        return jTextFieldComposition;
+    }
+
+    public JTextField getjTextFieldDepotLegal() {
+        return jTextFieldDepotLegal;
+    }
+
+    public JTextField getjTextFieldFamille() {
+        return jTextFieldFamille;
+    }
+
+    public JTextField getjTextFieldNomCommercial() {
+        return jTextFieldNomCommercial;
+    }
+
+    public JTextField getjTextFieldPrixEchantillon() {
+        return jTextFieldPrixEchantillon;
+    }
+
+    public JButton getjButtonFermer() {
+        return jButtonFermer;
+    }
+
+    public JButton getjButtonPrecedent() {
+        return jButtonPrecedent;
+    }
+
+    public JButton getjButtonSuivant() {
+        return jButtonSuivant;
+    }
+    
 }

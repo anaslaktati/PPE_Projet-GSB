@@ -5,7 +5,9 @@
  */
 package Vues;
 
+import java.awt.Color;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 
@@ -38,7 +40,7 @@ DefaultComboBoxModel modeleListeVisiteurs;
         jLabel1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jButtonOK = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         jTextFieldNomVisiteur = new javax.swing.JTextField();
@@ -55,9 +57,9 @@ DefaultComboBoxModel modeleListeVisiteurs;
         jLabel9 = new javax.swing.JLabel();
         jComboBoxLaboVisiteur = new javax.swing.JComboBox();
         jLabel10 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jButtonPrecedent = new javax.swing.JButton();
+        jButtonSuivant = new javax.swing.JButton();
+        jButtonFermer = new javax.swing.JButton();
         jComboBoxListeVisiteurs = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -67,38 +69,85 @@ DefaultComboBoxModel modeleListeVisiteurs;
 
         jLabel2.setText("Recherche");
 
-        jButton1.setText("OK");
+        jButtonOK.setText("OK");
+        jButtonOK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonOKActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Nom");
 
+        jTextFieldNomVisiteur.setEditable(false);
+        jTextFieldNomVisiteur.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+        jTextFieldNomVisiteur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNomVisiteurActionPerformed(evt);
+            }
+        });
+
         jLabel4.setText("Prenom");
+
+        jTextFieldPrenomVisiteur.setEditable(false);
+        jTextFieldPrenomVisiteur.setDisabledTextColor(new java.awt.Color(51, 51, 51));
 
         jLabel5.setText("Adresse");
 
+        jTextFieldAdresseVisiteur.setEditable(false);
+        jTextFieldAdresseVisiteur.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+
         jLabel6.setText("CP");
+
+        jTextFieldCPVisiteur.setEditable(false);
+        jTextFieldCPVisiteur.setDisabledTextColor(new java.awt.Color(51, 51, 51));
 
         jLabel8.setText("Ville");
 
-        jComboBoxSecteurVisiteur.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Est", "Nord", "Ouest", "Paris centre", "Sud" }));
+        jTextFieldVilleVisiteur.setEditable(false);
+        jTextFieldVilleVisiteur.setDisabledTextColor(new java.awt.Color(51, 51, 51));
+
+        jComboBoxSecteurVisiteur.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBoxSecteurVisiteur.setForeground(Color.BLACK);
+        jComboBoxSecteurVisiteur.setToolTipText("");
+        jComboBoxSecteurVisiteur.setEnabled(false);
+        jComboBoxSecteurVisiteur.setOpaque(false);
+        jComboBoxSecteurVisiteur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxSecteurVisiteurActionPerformed(evt);
+            }
+        });
 
         jLabel9.setText("Secteur");
 
-        jComboBoxLaboVisiteur.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Bichat", "Gyverny", "Swiss Kane" }));
+        jComboBoxLaboVisiteur.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBoxLaboVisiteur.setForeground(Color.BLACK);
+        jComboBoxLaboVisiteur.setEnabled(false);
+        jComboBoxLaboVisiteur.setOpaque(false);
+        jComboBoxLaboVisiteur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxLaboVisiteurActionPerformed(evt);
+            }
+        });
 
         jLabel10.setText("Labo");
 
-        jButton2.setText("Précédent");
+        jButtonPrecedent.setText("Précédent");
 
-        jButton3.setText("Suivant");
+        jButtonSuivant.setText("Suivant");
 
-        jButton4.setText("Fermer");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jButtonFermer.setText("Fermer");
+        jButtonFermer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButtonFermerActionPerformed(evt);
             }
         });
 
         jComboBoxListeVisiteurs.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxListeVisiteurs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxListeVisiteursActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -118,7 +167,7 @@ DefaultComboBoxModel modeleListeVisiteurs;
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jComboBoxListeVisiteurs, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1))
+                        .addComponent(jButtonOK))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -144,9 +193,9 @@ DefaultComboBoxModel modeleListeVisiteurs;
                                 .addGap(6, 6, 6)
                                 .addComponent(jTextFieldVilleVisiteur, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton2)
+                                .addComponent(jButtonPrecedent)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton3))
+                                .addComponent(jButtonSuivant))
                             .addComponent(jTextFieldNomVisiteur, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,7 +204,7 @@ DefaultComboBoxModel modeleListeVisiteurs;
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 16, Short.MAX_VALUE)
-                                .addComponent(jButton4)))))
+                                .addComponent(jButtonFermer)))))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -168,7 +217,7 @@ DefaultComboBoxModel modeleListeVisiteurs;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jButton1)
+                    .addComponent(jButtonOK)
                     .addComponent(jComboBoxListeVisiteurs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -202,18 +251,38 @@ DefaultComboBoxModel modeleListeVisiteurs;
                     .addComponent(jLabel10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(jButtonPrecedent)
+                    .addComponent(jButtonSuivant)
+                    .addComponent(jButtonFermer))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void jButtonFermerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFermerActionPerformed
+        
+    }//GEN-LAST:event_jButtonFermerActionPerformed
+
+    private void jButtonOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOKActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonOKActionPerformed
+
+    private void jComboBoxListeVisiteursActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxListeVisiteursActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxListeVisiteursActionPerformed
+
+    private void jComboBoxSecteurVisiteurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxSecteurVisiteurActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxSecteurVisiteurActionPerformed
+
+    private void jComboBoxLaboVisiteurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxLaboVisiteurActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxLaboVisiteurActionPerformed
+
+    private void jTextFieldNomVisiteurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomVisiteurActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldNomVisiteurActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,10 +321,10 @@ DefaultComboBoxModel modeleListeVisiteurs;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButtonFermer;
+    private javax.swing.JButton jButtonOK;
+    private javax.swing.JButton jButtonPrecedent;
+    private javax.swing.JButton jButtonSuivant;
     private javax.swing.JComboBox jComboBoxLaboVisiteur;
     private javax.swing.JComboBox jComboBoxListeVisiteurs;
     private javax.swing.JComboBox jComboBoxSecteurVisiteur;
@@ -313,8 +382,21 @@ DefaultComboBoxModel modeleListeVisiteurs;
     public JTextField getjTextFieldVilleVisiteur() {
         return jTextFieldVilleVisiteur;
     }
-    
-    
-    
+
+    public JButton getjButtonFermer() {
+        return jButtonFermer;
+    }
+
+    public JButton getjButtonOK() {
+        return jButtonOK;
+    }
+
+    public JButton getjButtonPrecedent() {
+        return jButtonPrecedent;
+    }
+
+    public JButton getjButtonSuivant() {
+        return jButtonSuivant;
+    }
     
 }
